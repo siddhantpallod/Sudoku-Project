@@ -142,7 +142,8 @@ def main():
             assignment_name = input("What is the assignment name: ")
             assignment_graph(assignment_name, assignments, submissions)
 
-        break
+        else:
+            break
 
 if __name__ == "__main__":
     main()
