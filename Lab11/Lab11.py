@@ -123,27 +123,25 @@ def main():
     assignments = load_assignments('data/data/assignments.txt')
     submissions = load_submissions('data/data/submissions')
 
-    while True:
-        print("1: Student grade")
-        print("2: Assignment statistics")
-        print("3: Assignment graph")
+    print("1: Student grade")
+    print("2: Assignment statistics")
+    print("3: Assignment graph")
 
-        selection = input("Enter your selection: ")
+    selection = input("Enter your selection: ")
 
-        if selection == "1":
-            student_name = input("What is the student's name: ")
-            calculate_student_grade(student_name, students, assignments, submissions)
+    if selection == "1":
+        student_name = input("What is the student's name: ")
+        calculate_student_grade(student_name, students, assignments, submissions)
 
-        elif selection == "2":
-            assignment_name = input("What is the assignment name: ")
-            assignment_stats(assignment_name, assignments, submissions)
+    elif selection == "2":
+        assignment_name = input("What is the assignment name: ")
+        assignment_stats(assignment_name, assignments, submissions)
 
-        elif selection == "3":
-            assignment_name = input("What is the assignment name: ")
-            assignment_graph(assignment_name, assignments, submissions)
+    elif selection == "3":
+        assignment_name = input("What is the assignment name: ")
+        assignment_graph(assignment_name, assignments, submissions)
 
-        else:
-            break
+
 
 if __name__ == "__main__":
     main()
