@@ -20,7 +20,6 @@ class SudokuGenerator:
     def __init__(self, row_length, removed_cells):
         self.row_length = row_length
         self.removed_cells = removed_cells
-        #self.board = [[0 for i in range(self.row_length)] for j in range(9)]
         self.board = []
         for j in range(9):
             row = []
@@ -38,14 +37,13 @@ class SudokuGenerator:
                 row.append(self.board[j][i])
             result.append(row)
         return result
-        #return [[self.board[j][i] for i in range(self.row_length)] for j in range(9)]
 
     def print_board(self):
         for row in self.board:
             print(row)
 
     def valid_in_row(self, row, num):
-        for cell in self.board[row]:  # Iterate through row
+        for cell in self.board[row]: 
             if cell == num:
                 return False
         return True
@@ -71,7 +69,7 @@ class SudokuGenerator:
         return False
 
     def fill_box(self, row_start, col_start):
-        nums = list(range(1, 10))  # Numbers 1 to 9
+        nums = list(range(1, 10))  
         random.shuffle(nums)
         for i in range(3):
             for j in range(3):
